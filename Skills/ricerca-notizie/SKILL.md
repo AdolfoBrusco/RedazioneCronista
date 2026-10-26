@@ -63,7 +63,7 @@ Prima di inserire controlla che il codice non esista già. Una notizia per volta
 È la tua memoria: senza non sai cosa hai già visto. Una riga in `cronaca_valutazione` per OGNI notizia che hai davvero valutato in questo giro (arrivata almeno al confronto del punto 2), una sola `insert` con più righe:
 - `data` = oggi (data italiana), `giro` = `mattina`/`pomeriggio`/`sera`, `titolo` (titolo breve, con "Aggiornamento:" se lo è);
 - `esito`: `proposta` (è diventata una notizia del punto 6: metti `notizia_id`) oppure `scartata` (con `motivo` breve, lo stesso della sezione "Scartate" dell'email; per una voce di `notizia_da_seguire` non ancora uscita: "in attesa: <voce>");
-- `fonte_url` (se c'è), `sintesi` (una riga, facoltativa), `aggiornamento_di` (titolo e data della notizia precedente, se è un aggiornamento).
+- `fonte_url` (sempre, anche per le scartate: serve a Dolphino per riaprirla), `sintesi` (una riga che dice di cosa parla la notizia: obbligatoria anche per le scartate, perché Dolphino le legge nella pagina «Notizie scartate» e può chiedere di recuperarle), `motivo` (per le scartate: chiaro, in italiano semplice, senza sigle), `aggiornamento_di` (titolo e data della notizia precedente, se è un aggiornamento).
 Non registrare ogni titolo letto: solo quelle valutate, come per la sezione "Scartate". Se il giro non trova niente di valido, registra comunque le scartate. Le righe `storico` sono quelle importate dal vecchio log: non toccarle.
 
 ## 8. Riepilogo
